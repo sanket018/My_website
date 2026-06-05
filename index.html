@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FutureTech Student Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="bg-animation"></div>
+
+<header>
+
+    <nav>
+
+<h2 class="logo">FutureTech</h2>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+
+<div class="buttons">
+
+<button id="loginBtn">Login</button>
+
+<button id="signupBtn">Create Account</button>
+
+<div id="userProfile" style="display:none;">
+
+👤 <span id="userName"></span>
+
+</div>
+
+</div>
+
+</nav>
+
+
+</header>
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h1>Build Your Digital Future</h1>
+
+<p>
+Learn Programming, Track Progress,
+Save Notes and Become a Better Developer.
+</p>
+
+<button class="start-btn">
+Get Started
+</button>
+
+</div>
+
+<div class="hero-image">
+<img src="images/hero.png" alt="Hero Image">
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features" id="features">
+
+<h2>Why Choose Us</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>⚡ Fast Learning</h3>
+<p>Quickly learn modern technologies.</p>
+</div>
+
+<div class="card">
+<h3>🔒 Secure</h3>
+<p>Save notes and data locally.</p>
+</div>
+
+<div class="card">
+<h3>📱 Responsive</h3>
+<p>Works on Desktop, Tablet and Mobile.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- USER DASHBOARD -->
+
+<section class="dashboard">
+
+<h2 id="welcomeUser">
+Welcome Student 👋
+</h2>
+
+<p>
+Manage your learning journey from one place.
+</p>
+
+</section>
+
+<!-- STUDY RESOURCES -->
+
+<section class="resources" id="resources">
+
+<h2>Study Resources</h2>
+
+<div class="cards">
+
+<a class="card"
+href="https://www.w3schools.com"
+target="_blank">
+
+HTML CSS JavaScript
+
+</a>
+
+<a class="card"
+href="https://www.geeksforgeeks.org"
+target="_blank">
+
+Programming Tutorials
+
+</a>
+
+<a class="card"
+href="https://www.freecodecamp.org"
+target="_blank">
+
+Web Development
+
+</a>
+
+<a class="card"
+href="https://www.khanacademy.org"
+target="_blank">
+
+Mathematics
+
+</a>
+
+<a class="card"
+href="https://www.coursera.org"
+target="_blank">
+
+Online Courses
+
+</a>
+
+</div>
+
+
+
+<h2>Premium Learning Resources</h2>
+
+<div class="cards">
+
+<a class="card"
+href="https://www.youtube.com/@CodeWithHarry"
+target="_blank">
+
+🎥 CodeWithHarry
+<br>
+HTML CSS JavaScript
+
+</a>
+
+<a class="card"
+href="https://www.youtube.com/@ApnaCollegeOfficial"
+target="_blank">
+
+🎥 Apna College
+<br>
+DSA & Placement
+
+</a>
+
+<a class="card"
+href="https://www.youtube.com/@freecodecamp"
+target="_blank">
+
+🎥 freeCodeCamp
+<br>
+Full Development Courses
+
+</a>
+
+<a class="card"
+href="https://www.youtube.com/@TraversyMedia"
+target="_blank">
+
+🎥 Traversy Media
+<br>
+Frontend & Backend
+
+</a>
+
+<a class="card"
+href="https://www.youtube.com/@ProgrammingwithMosh"
+target="_blank">
+
+🎥 Programming with Mosh
+<br>
+Professional Tutorials
+
+</a>
+
+<a class="card"
+href="https://www.youtube.com/@Telusko"
+target="_blank">
+
+🎥 Telusko
+<br>
+Java & Programming
+
+</a>
+
+</div>
+
+</section>
+
+<!-- STUDY TIMER -->
+
+<section class="timer">
+
+<h2>Pomodoro Study Timer</h2>
+
+<h1 id="time">25:00</h1>
+
+<button onclick="startTimer()">
+Start Study Session
+</button>
+
+</section>
+
+<!-- TODO LIST -->
+
+<section class="todo">
+
+<h2>Today's Tasks</h2>
+
+<input
+type="text"
+id="taskInput"
+placeholder="Enter your task">
+
+<button onclick="addTask()">
+Add Task
+</button>
+
+<ul id="taskList"></ul>
+
+</section>
+
+<!-- NOTES -->
+
+<section class="notes">
+
+<h2>Study Notes</h2>
+
+<textarea
+id="notes"
+rows="10"
+placeholder="Write your notes here...">
+</textarea>
+
+<br><br>
+
+<button onclick="saveNotes()">
+Save Notes
+</button>
+
+</section>
+
+<!-- PROGRESS -->
+
+<section class="progress-section">
+
+<h2>Learning Progress</h2>
+
+<progress
+id="progressBar"
+value="35"
+max="100">
+</progress>
+
+<p>35% Completed</p>
+
+</section>
+
+<!-- QUOTES -->
+
+<section class="quotes">
+
+<h2>Daily Motivation</h2>
+
+<p id="quote"></p>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+<h2>About FutureTech</h2>
+
+<p>
+
+FutureTech Student Hub helps students
+learn programming, manage notes,
+track progress and improve skills.
+
+</p>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 FutureTech Student Hub.
+All Rights Reserved.
+</p>
+
+</footer>
+
+<!-- LOGIN MODAL -->
+
+<div class="modal" id="loginModal">
+
+<div class="modal-content">
+
+<span class="close">&times;</span>
+
+<h2>Login</h2>
+
+<input
+type="email"
+placeholder="Email">
+
+<input
+type="password"
+placeholder="Password">
+
+<button>
+Login
+</button>
+
+</div>
+
+</div>
+
+<!-- SIGNUP MODAL -->
+
+<div class="modal" id="signupModal">
+
+<div class="modal-content">
+
+<span class="close2">&times;</span>
+
+<h2>Create Account</h2>
+
+<input
+type="text"
+placeholder="Full Name">
+
+<input
+type="email"
+placeholder="Email">
+
+<input
+type="password"
+placeholder="Password">
+
+<button>
+Create Account
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
